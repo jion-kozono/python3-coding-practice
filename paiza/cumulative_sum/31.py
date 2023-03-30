@@ -1,7 +1,7 @@
-n, q = 5, int(input())
+n, k = map(int,input().split())
 A = [[0] * (n+1) for _ in range((n+1))]
 
-for i in range(q):
+for i in range(k):
     a, b, c, d = map(int, input().split())
     # top_left: (a,b), right_bottom: (c,d)
     # 加算するマス : 範囲の左上のマスと、範囲の右下の 1 つ右、かつ 1 つ下のマス
