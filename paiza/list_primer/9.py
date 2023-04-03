@@ -34,19 +34,21 @@ def insert(p,x):
     value[new_ptr] = x
 
     current_ptr = start_ptr
-    while current_ptr != end_ptr:
-        if current_ptr == p:
+    for i in range(p + 1):
+        if current_ptr == end_ptr:
+            break
+        if i == p:
             next_ptr[new_ptr] = next_ptr[current_ptr]
             next_ptr[current_ptr] = new_ptr
             break
         current_ptr = next_ptr[current_ptr]
 
 def delete(p):
-    global back
-
     current_ptr = start_ptr
-    while current_ptr != end_ptr:
-        if current_ptr == p:
+    for i in range(p + 1):
+        if current_ptr == end_ptr:
+            break
+        if i == p:
             next_ptr[current_ptr] = next_ptr[next_ptr[current_ptr]]
             break
         current_ptr = next_ptr[current_ptr]
