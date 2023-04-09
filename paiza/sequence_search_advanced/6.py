@@ -11,9 +11,12 @@ n,m = MI()
 A = LI()
 B = LI()
 
-for i in range(n - m + 1):
-    if A[i : i + m] == B:
-        print(i + 1)
+match_count = 0
+for i in range(n):
+    if A[i] == B[match_count]:
+        match_count += 1
+    if match_count == m:
+        print("Yes")
         break
 else:
-    print(-1)
+    print("No")
