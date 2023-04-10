@@ -7,9 +7,11 @@ def S(): return input()
 def MS(): return input().split()
 def LS(): return list(input().split())
 
-s = S()
-c = S()
-for i in range(len(s)):
-    if s[i] == c:
-        print(i+1)
-        break
+n,m,k,x = MI()
+
+for i in range(n):
+    s = S()
+    col = s.split(",")
+    target = int(col[k-1])
+    if target >= x:
+        print(s)

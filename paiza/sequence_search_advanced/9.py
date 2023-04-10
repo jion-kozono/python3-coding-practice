@@ -8,8 +8,14 @@ def MS(): return input().split()
 def LS(): return list(input().split())
 
 s = S()
-c = S()
-for i in range(len(s)):
-    if s[i] == c:
-        print(i+1)
-        break
+t = S()
+
+ans = 0
+for i in range(len(s) - len(t) + 1):
+    if s[i : i + len(t)] == t:
+        ans += 1
+
+print(ans)
+
+# 同じ文字の場合だめ
+# print(s.count(t))

@@ -8,8 +8,6 @@ def MS(): return input().split()
 def LS(): return list(input().split())
 
 s = S()
-c = S()
-for i in range(len(s)):
-    if s[i] == c:
-        print(i+1)
-        break
+
+for i in range(ord("a"), ord("z")+1):
+    print(s.count(chr(i)))

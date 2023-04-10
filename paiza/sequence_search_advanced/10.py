@@ -8,8 +8,15 @@ def MS(): return input().split()
 def LS(): return list(input().split())
 
 s = S()
-c = S()
-for i in range(len(s)):
-    if s[i] == c:
-        print(i+1)
-        break
+
+print(s.replace(",", " "))
+
+# s = input()
+# split = [""]
+# for i in range(len(s)):
+#     if s[i] == ",":
+#         split.append("")
+#     else:
+#         split[-1] += s[i]
+
+# print(" ".join(split))
