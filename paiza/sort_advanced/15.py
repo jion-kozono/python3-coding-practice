@@ -7,14 +7,16 @@ def S(): return input()
 def MS(): return input().split()
 def LS(): return list(input().split())
 
-n = I()
-y_xs = [[0, 0] for _ in range(n)]
-for i in range(n):
-    y,x = MI()
-    y_xs[i][0] = y
-    y_xs[i][1] = x
+n,q = MI()
+A = LI()
+X = LI()
 
-y_xs.sort(key=lambda y_x: abs(y_x[0])+abs(y_x[1]))
+compressed = {a_i: i + 1 for i, a_i in enumerate(sorted(A))}
 
-for i in range(n):
-    print(*y_xs[i])
+for x_i in X:
+    print(compressed[x_i])
+
+# # 以下はタイムアウト
+# A.sort()
+# for i in range(q):
+#     print(A.index(X[i])+1)

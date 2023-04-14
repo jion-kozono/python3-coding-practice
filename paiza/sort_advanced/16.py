@@ -7,14 +7,14 @@ def S(): return input()
 def MS(): return input().split()
 def LS(): return list(input().split())
 
-n = I()
-y_xs = [[0, 0] for _ in range(n)]
-for i in range(n):
-    y,x = MI()
-    y_xs[i][0] = y
-    y_xs[i][1] = x
+n,q = MI()
+A = LI()
 
-y_xs.sort(key=lambda y_x: abs(y_x[0])+abs(y_x[1]))
-
-for i in range(n):
-    print(*y_xs[i])
+for i in range(q):
+    query, k, x = MS()
+    k = int(k)-1
+    x = int(x)
+    if query == "update":
+        A[k] = x
+    else:
+        print(sorted(A, reverse=True)[k])
